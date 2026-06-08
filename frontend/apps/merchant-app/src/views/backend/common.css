@@ -1,0 +1,18 @@
+.page-frame {
+  height: 100%;
+}
+
+.fixed-page {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 16px;
+}
+
+.toolbar-card,
+.table-shell,
+.page-card {
+  background: var(--merchant-surface);
+  border: 1px solid var(--merchant-line);
+  border-radius: 20px;
+  box-shadow: var(--merchant-shadow);
+}

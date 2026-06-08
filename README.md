@@ -1,0 +1,13 @@
+# Takeout System
+
+This repository has been sanitized for public upload.
+
+Before running the project, provide the required environment variables for:
+
+- MySQL: `MYSQL_URL`, `MYSQL_USERNAME`, `MYSQL_PASSWORD`
+- Redis: `REDIS_HOST`, `REDIS_PORT`, `REDIS_PASSWORD`
+- Nacos: `NACOS_SERVER_ADDR`, `NACOS_USERNAME`, `NACOS_PASSWORD`
+- JWT: `TAKEOUT_JWT_SECRET`, `TAKEOUT_JWT_EXPIRE_HOURS`
+- AMap: `AMAP_WEB_SERVICE_KEY`, `VITE_AMAP_KEY`, `VITE_AMAP_SECURITY_JS_CODE`
+- Aliyun OSS: `ALIYUN_OSS_ACCESS_KEY_ID`, `ALIYUN_OSS_ACCESS_KEY_SECRET`, `ALIYUN_OSS_BUCKET`, `ALIYUN_OSS_PUBLIC_DOMAIN`
+- Alipay sandbox: `ALIPAY_APP_ID`, `ALIPAY_PRIVATE_KEY`, `ALIPAY_PUBLIC_KEY`

@@ -1,0 +1,36 @@
+server:
+  port: 8104
+
+spring:
+  application:
+    name: takeout-order-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${NACOS_SERVER_ADDR:127.0.0.1:8848}
+        username: ${NACOS_USERNAME:nacos}
+        password: ${NACOS_PASSWORD:}
+  datasource:
+    url: ${MYSQL_URL:jdbc:mysql://localhost:3306/takeout_platform?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai}
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+
+takeout:
+  jwt:
+    secret: ${TAKEOUT_JWT_SECRET:takeout-demo-jwt-secret}
+    expire-hours: ${TAKEOUT_JWT_EXPIRE_HOURS:72}
+  alipay:
+    gateway-url: ${ALIPAY_GATEWAY:https://openapi-sandbox.dl.alipaydev.com/gateway.do}
+    app-id: ${ALIPAY_APP_ID:}
+    private-key: ${ALIPAY_PRIVATE_KEY:}
+    alipay-public-key: ${ALIPAY_PUBLIC_KEY:}
+    return-url: ${ALIPAY_RETURN_URL:http://localhost:8088/api/orders/alipay/return}
+    notify-url: ${ALIPAY_NOTIFY_URL:}
+    frontend-success-url: ${ALIPAY_FRONTEND_SUCCESS_URL:http://localhost:5173/orders}
+    strict-verify: ${ALIPAY_STRICT_VERIFY:false}

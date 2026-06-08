@@ -1,0 +1,30 @@
+server:
+  port: ${RIDER_SERVER_PORT:8103}
+
+spring:
+  application:
+    name: takeout-rider-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${NACOS_SERVER_ADDR:127.0.0.1:8848}
+        username: ${NACOS_USERNAME:nacos}
+        password: ${NACOS_PASSWORD:}
+  datasource:
+    url: ${MYSQL_URL:jdbc:mysql://localhost:3306/takeout_platform?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai}
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+
+takeout:
+  jwt:
+    secret: ${TAKEOUT_JWT_SECRET:takeout-demo-jwt-secret}
+    expire-hours: ${TAKEOUT_JWT_EXPIRE_HOURS:72}
+
+amap:
+  web-service-key: ${AMAP_WEB_SERVICE_KEY:}

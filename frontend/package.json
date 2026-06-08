@@ -1,0 +1,20 @@
+{
+  "name": "takeout-frontend-workspace",
+  "private": true,
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "dev:user": "npm --workspace user-app run dev",
+    "dev:merchant": "npm --workspace merchant-app run dev",
+    "dev:rider": "npm --workspace rider-app run dev",
+    "dev:admin": "npm --workspace admin-app run dev"
+  },
+  "workspaces": [
+    "apps/*"
+  ],
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.2",
+    "element-plus": "^2.14.1",
+    "vue": "^3.5.34",
+    "vue-router": "^4.5.1"
+  }
+}
